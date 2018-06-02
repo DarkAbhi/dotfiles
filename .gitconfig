@@ -1,0 +1,27 @@
+[user]
+	name = Abhishek AN
+	email = darkabhi1520@gmail.com
+[color]
+	ui = auto
+[commit]
+	gpgsign = true
+[mergetool]
+	keepBackup = false
+[format]
+        signoff = true
+[core]
+	editor = nano
+[alias]
+	c = commit -s
+	a = true
+	cp = cherry-pick --signoff
+	cpa = cherry-pick --abort
+	cpc = cherry-pick --continue
+	d = diff
+	p = push
+	pf = p --force
+	r = remote
+	rh = reset --hard
+	s = status
+[merge]
+        log = true
