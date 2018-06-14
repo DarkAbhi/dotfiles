@@ -11,6 +11,7 @@
         signoff = true
 [core]
 	editor = nano
+	excludesfile = /home/darkabhi/.gitignore
 [alias]
 	c = commit -s
 	a = true
@@ -25,3 +26,4 @@
 	s = status
 [merge]
         log = true
+
