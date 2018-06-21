@@ -80,9 +80,12 @@ autoload run-help-git
 autoload run-help-svn
 autoload run-help-svk
 alias help=run-help
+alias pcm='sudo pacman'
+alias neofetch='neofetch | lolcat'
+alias grh='git reset --hard'
+alias manifest='cd .repo/local_manifests'
 
 export CROSS_COMPILE=/home/darkabhi/aarch64-linux-android-4.9/bin/aarch64-linux-android-
-export JOBS=8 # Can be CPU core # x 2
 
 # ccache
 export CCACHE_DIR="/home/darkabhi/.ccache"
@@ -96,3 +99,4 @@ if [ -d "$HOME/platform-tools" ] ; then
 fi
 
 export EDITOR=/usr/bin/nano
+
