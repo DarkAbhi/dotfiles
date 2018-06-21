@@ -25,3 +25,5 @@
 [merge]
         log = true
 
+[credential]
+	helper = cache
