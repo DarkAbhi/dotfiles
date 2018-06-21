@@ -14,12 +14,9 @@
 	excludesfile = /home/darkabhi/.gitignore
 [alias]
 	c = commit -s
-	cp = cherry-pick --signoff
-	cpa = cherry-pick --abort
-	cpc = cherry-pick --continue
 	d = diff
 	p = push
-	pf = p --force
+	pf = push --force
 	r = remote
 	s = status
 [merge]

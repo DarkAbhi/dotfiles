@@ -75,15 +75,34 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+export EDITOR=/usr/bin/nano
+
 autoload -U run-help
 autoload run-help-git
 autoload run-help-svn
 autoload run-help-svk
 alias help=run-help
+
+# System
 alias pcm='sudo pacman'
+alias pcmsyu='sudo pacman -Syu | lolcat'
+alias c='clear'
+alias la='ls -A'
 alias neofetch='neofetch | lolcat'
-alias grh='git reset --hard'
+
+# Builds
+alias rawwork='sh kernel.sh 2>&1 | tee ~/kernelbuild.txt'
 alias manifest='cd .repo/local_manifests'
+
+# Git aliases
+
+alias gc='git clone'
+alias grh='git reset --hard'
+alias gfa='git fetch --all'
+alias gcb='git clone --bare'
+alias gcp='cherry-pick --signoff'
+alias gcpa='cherry-pick --abort'
+alias gcpc='cherry-pick --continue'
 
 export CROSS_COMPILE=/home/darkabhi/aarch64-linux-android-4.9/bin/aarch64-linux-android-
 
@@ -97,6 +116,3 @@ export PATH="/usr/lib/ccache:$PATH"
 if [ -d "$HOME/platform-tools" ] ; then
     PATH="$HOME/platform-tools:$PATH"
 fi
-
-export EDITOR=/usr/bin/nano
-
