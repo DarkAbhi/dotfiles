@@ -86,6 +86,7 @@ alias help=run-help
 # System
 alias pcm='sudo pacman'
 alias pcmsyu='sudo pacman -Syu | lolcat'
+alias pkglist='pacman -Qnq > pkglist.txt'
 alias c='clear'
 alias ls='ls --color=auto -p'
 alias la='ls -A'
@@ -101,9 +102,9 @@ alias gc='git clone'
 alias grh='git reset --hard'
 alias gfa='git fetch --all'
 alias gcb='git clone --bare'
-alias gcp='cherry-pick --signoff'
-alias gcpa='cherry-pick --abort'
-alias gcpc='cherry-pick --continue'
+alias gcp='git cherry-pick --signoff'
+alias gcpa='git cherry-pick --abort'
+alias gcpc='git cherry-pick --continue'
 
 export CROSS_COMPILE=/home/darkabhi/aarch64-linux-android-4.9/bin/aarch64-linux-android-
 
