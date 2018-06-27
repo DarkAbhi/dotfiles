@@ -87,6 +87,7 @@ alias help=run-help
 alias pcm='sudo pacman'
 alias pcmsyu='sudo pacman -Syu | lolcat'
 alias c='clear'
+alias ls='ls --color=auto -p'
 alias la='ls -A'
 alias neofetch='neofetch | lolcat'
 
