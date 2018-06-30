@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/darkabhi/.oh-my-zsh
+export ZSH=/home/darkabhi/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -75,6 +75,16 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# add Android SDK platform tools to path
+if [ -d "$HOME/platform-tools" ] ; then
+    PATH="$HOME/platform-tools:$PATH"
+fi
+
 export EDITOR=/usr/bin/nano
 
 autoload -U run-help
@@ -114,7 +124,5 @@ export CC="ccache gcc"
 export CXX="ccache g++"
 export PATH="/usr/lib/ccache:$PATH"
 
-# add Android SDK platform tools to path
-if [ -d "$HOME/platform-tools" ] ; then
-    PATH="$HOME/platform-tools:$PATH"
-fi
+# To avoid prefix
+export PATH=.:$PATH
