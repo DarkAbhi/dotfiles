@@ -25,7 +25,6 @@ net/wireguard
 *.jar
 *.rar
 *.tar
-*.zip
 
 # Logs and databases #
 ######################
