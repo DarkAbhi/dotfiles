@@ -198,6 +198,7 @@ assign [class="vlc"] → 7
 assign [class="libreoffice-writer"] → 7
 assign [class="Shotwell"] → 8
 assign [class="evince"] → 8
+assign [class="jetbrains-clion"] → 9
 assign [class="qbittorrent"] → 9
 assign [class="gnome-twitch"] → 9
 for_window [class="Spotify"] move to workspace 10
@@ -211,7 +212,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #d
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 #Start Tapping Enabled be default on boot
-exec xinput set-prop 14 302 1
+exec xinput set-prop 12 284 1
 
 #Start Polybar on boot
 exec_always --no-startup-id $HOME/.config/polybar/startup.sh
