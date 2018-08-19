@@ -25,4 +25,4 @@
         log = true
 
 [credential]
-	helper = cache
+	helper = cache --timeout=3500
