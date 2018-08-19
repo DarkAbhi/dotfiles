@@ -15,6 +15,8 @@
 [alias]
 	c = commit -s
 	d = diff
+	loa = log --oneline --author='Abhishek AN'
+	loc = log --oneline --committer='Abhishek AN'
 	p = push
 	pf = push --force
 	r = remote
