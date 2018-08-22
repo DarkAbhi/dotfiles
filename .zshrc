@@ -103,7 +103,9 @@ alias la='ls -A'
 alias neofetch='neofetch | lolcat'
 
 # Builds
-alias rawwork='sh kernel.sh 2>&1 | tee ~/kernelbuild.txt'
+alias buildclang='sh buildclang 2>&1 | tee ~/Compiler-ClangBuild.txt'
+alias rawworkc='sh clang.sh 2>&1 | tee ~/clang-kernel-build.txt'
+alias rawworkgcc='sh gcc.sh 2>&1 | tee ~/gcc-kernel-build.txt'
 alias manifest='cd .repo/local_manifests'
 
 # Git aliases
@@ -116,13 +118,8 @@ alias gcp='git cherry-pick --signoff'
 alias gcpa='git cherry-pick --abort'
 alias gcpc='git cherry-pick --continue'
 
-export CROSS_COMPILE=/home/darkabhi/aarch64-linux-android-4.9/bin/aarch64-linux-android-
-
 # ccache
 export CCACHE_DIR="/home/darkabhi/.ccache"
 export CC="ccache gcc"
 export CXX="ccache g++"
 export PATH="/usr/lib/ccache:$PATH"
-
-# To avoid prefix
-export PATH=.:$PATH
