@@ -103,7 +103,7 @@ alias la='ls -A'
 alias neofetch='neofetch | lolcat'
 
 # Builds
-alias buildclang='sh buildclang 2>&1 | tee ~/Compiler-ClangBuild.txt'
+alias buildclang='sh ./build-clang -v RawWork 2>&1 | tee ~/Compiler-ClangBuild.txt'
 alias rawworkc='sh clang.sh 2>&1 | tee ~/clang-kernel-build.txt'
 alias rawworkgcc='sh gcc.sh 2>&1 | tee ~/gcc-kernel-build.txt'
 alias manifest='cd .repo/local_manifests'
