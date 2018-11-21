@@ -51,6 +51,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -94,7 +95,7 @@ autoload run-help-svk
 alias help=run-help
 
 # System
-alias pcm='sudo pacman'
+alias pcm='sudo pacman -S '
 alias pcmsyu='sudo pacman -Syu | lolcat'
 alias pkglist='pacman -Qnq > pkglist.txt'
 alias c='clear'
@@ -123,3 +124,10 @@ export CCACHE_DIR="/home/darkabhi/.ccache"
 export CC="ccache gcc"
 export CXX="ccache g++"
 export PATH="/usr/lib/ccache:$PATH"
+
+# GO
+export GOPATH=$HOME/go
+
+# zsh Auto Suggestions
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=2'
