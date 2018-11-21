@@ -1,8 +1,6 @@
 [colors]
-;background = ${xrdb:color0:#222}
 background = #0015374F
 background-alt = #0F0F0F
-;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
 foreground-alt = #555
 primary = #ffb52a
@@ -43,22 +41,18 @@ font-3 = "Font Awesome 5 Free:style=Regular:pixelsize=12;1"
 font-4 = "Font Awesome 5 Free:style=Solid:pixelsize=12;1"
 font-5 = "Font Awesome 5 Brands:pixelsize=12;1"
 
-modules-left = bspwm i3
-modules-center = 
-modules-right = alsa memory cpu wlan battery date 
+modules-left = i3
+modules-center = spotify previous next
+modules-right = alsa memory cpu wlan battery date
 
 tray-position = right
 tray-padding = 2
 ;tray-transparent = true
 ;tray-background = #0063ff
 
-;wm-restack = bspwm
 ;wm-restack = i3
 
 ;override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
 
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
@@ -433,3 +427,36 @@ margin-top = 5
 margin-bottom = 5
 
 ; vim:ft=dosini
+
+
+;Spotify Modules
+
+[module/spotify]
+type = custom/script
+interval = 1
+format-prefix = " " 
+format = <label>
+exec = python /home/darkabhi/scripts/spotify_status.py -f '{artist}: {song}'
+format-underline = #1db954
+
+[module/previous]
+type = custom/script
+interval = 86400
+format = "%{T3}<label>"
+format-padding = 5
+; Previous song icon
+exec = echo ""
+format-underline = #1db954
+line-size = 1
+click-left = "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+
+[module/next]
+type = custom/script
+interval = 86400
+format = "%{T3}<label>"
+format-padding = 5
+; Next song icon
+exec = echo ""
+format-underline = #1db954
+line-size = 1
+click-left = "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
