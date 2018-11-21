@@ -15,6 +15,7 @@
 [alias]
 	c = commit -s
 	d = diff
+	lo = log --pretty=oneline
 	loa = log --oneline --author='Abhishek AN'
 	loc = log --oneline --committer='Abhishek AN'
 	p = push
