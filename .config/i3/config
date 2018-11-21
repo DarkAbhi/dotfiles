@@ -192,8 +192,8 @@ assign [class="Google-chrome"] → 2
 assign [class="Gedit"] → 3
 assign [class="jetbrains-studio"] → 4
 assign [class="Code"] → 4
-assign [class="TelegramDesktop"] → 5
 assign [class="discord"] → 5
+assign [class="TelegramDesktop"] → 5
 assign [class="^Nautilus$"] → 6
 assign [class="vlc"] → 7
 assign [class="libreoffice-writer"] → 7
@@ -223,5 +223,5 @@ exec_always --no-startup-id $HOME/.config/polybar/startup.sh
 exec --no-startup-id /usr/bin/compton --config ~/.config/compton.conf
 
 #Wallpaper
-exec --no-startup-id /usr/bin/feh --bg-scale '/home/darkabhi/Pictures/scene.jpg'
+exec --no-startup-id /usr/bin/feh --bg-scale '/home/darkabhi/Pictures/neo.png'
 
