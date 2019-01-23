@@ -64,11 +64,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='nano'
-# else
-#   export EDITOR='nano'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+   export EDITOR='nano'
+else
+   export EDITOR='nano'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -97,6 +97,7 @@ alias help=run-help
 # System
 alias pcm='sudo pacman -S '
 alias pcmsyu='sudo pacman -Syu | lolcat'
+alias pacclean='sudo pacman -Sc'
 alias pkglist='pacman -Qnq > pkglist.txt'
 alias c='clear'
 alias ls='ls --color=auto -p'
@@ -105,14 +106,15 @@ alias neofetch='neofetch | lolcat'
 
 # Builds
 alias buildclang='sh ./build-clang -v RawWork 2>&1 | tee ~/Compiler-ClangBuild.txt'
-alias rawworkc='sh clang.sh 2>&1 | tee ~/clang-kernel-build.txt'
-alias rawworkgcc='sh gcc.sh 2>&1 | tee ~/gcc-kernel-build.txt'
+alias rawworkc='sh ./build-kernel -c -gt 8 2>&1 | tee ~/clang-kernel-build.txt'
+alias rawworkgcc='sh ./build-kernel -gt 8 2>&1 | tee ~/gcc-kernel-build.txt'
 alias manifest='cd .repo/local_manifests'
 
 # Git aliases
 
 alias gc='git clone'
 alias grh='git reset --hard'
+alias grs='git reset --soft'
 alias gfa='git fetch --all'
 alias gcb='git clone --bare'
 alias gcp='git cherry-pick --signoff'
