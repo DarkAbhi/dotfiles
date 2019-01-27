@@ -41,7 +41,3 @@ net/wireguard
 .Trashes
 ehthumbs.db
 Thumbs.db
-
-# My scripts
-clang.sh
-gcc.sh
