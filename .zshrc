@@ -51,7 +51,6 @@ HIST_STAMPS="dd.mm.yyyy"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -106,8 +105,8 @@ alias neofetch='neofetch | lolcat'
 
 # Builds
 alias buildclang='sh ./build-clang -v RawWork 2>&1 | tee ~/Compiler-ClangBuild.txt'
-alias rawworkc='sh ./build-kernel -c -gt 8 2>&1 | tee ~/clang-kernel-build.txt'
-alias rawworkgcc='sh ./build-kernel -gt 8 2>&1 | tee ~/gcc-kernel-build.txt'
+alias rawworkc='sh ./build-kernel -c -gt 8 2>&1 | tee ~/clang-build-kernel.txt'
+alias rawworkgcc='sh ./build-kernel -gt 8 2>&1 | tee ~/gcc-build-kernel.txt'
 alias manifest='cd .repo/local_manifests'
 
 # Git aliases
@@ -121,6 +120,8 @@ alias gcp='git cherry-pick --signoff'
 alias gcpa='git cherry-pick --abort'
 alias gcpc='git cherry-pick --continue'
 
+# Gcloud Alias
+alias vertical='gcloud compute ssh --zone asia-south1-c DarkAbhi@ubuntu'
 # ccache
 export CCACHE_DIR="/home/darkabhi/.ccache"
 export CC="ccache gcc"
