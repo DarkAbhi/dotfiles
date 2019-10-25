@@ -94,6 +94,7 @@ autoload run-help-svk
 alias help=run-help
 
 # System
+alias neofetch='neofetch | lolcat'
 alias pcm='sudo pacman -S '
 alias pcmsyu='sudo pacman -Syu | lolcat'
 alias pacclean='sudo pacman -Sc'
@@ -101,10 +102,8 @@ alias pkglist='pacman -Qnq > pkglist.txt'
 alias c='clear'
 alias ls='ls --color=auto -p'
 alias la='ls -A'
-alias neofetch='neofetch | lolcat'
 
 # Builds
-alias buildclang='sh ./build-clang -v RawWork 2>&1 | tee ~/Compiler-ClangBuild.txt'
 alias rawworkc='sh ./build-kernel -c -gt 8 2>&1 | tee ~/clang-build-kernel.txt'
 alias rawworkgcc='sh ./build-kernel -gt 8 2>&1 | tee ~/gcc-build-kernel.txt'
 alias manifest='cd .repo/local_manifests'
@@ -121,7 +120,7 @@ alias gcpa='git cherry-pick --abort'
 alias gcpc='git cherry-pick --continue'
 
 # Gcloud Alias
-alias vertical='gcloud compute ssh --zone asia-south1-c DarkAbhi@ubuntu'
+alias byrant='gcloud compute ssh --zone us-central1-b darkabhi@ubuntu'
 # ccache
 export CCACHE_DIR="/home/darkabhi/.ccache"
 export CC="ccache gcc"
@@ -134,3 +133,6 @@ export GOPATH=$HOME/go
 # zsh Auto Suggestions
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=2'
+
+# FLUTTER
+export PATH="$PATH:/home/darkabhi/Development/flutter/bin"
