@@ -23,7 +23,7 @@
 	r = remote
 	s = status
 [merge]
-        log = true
+	log = 300
 
 [credential]
-	helper = cache --timeout=3500
+	helper = cache --timeout=7200
